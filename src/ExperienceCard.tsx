@@ -6,7 +6,6 @@ import {
   Typography,
   Box,
   Chip,
-  Paper,
 } from "@mui/material";
 
 export type ExperienceCardProps = {
@@ -34,6 +33,7 @@ export default function ExperienceCard({
     <Grid2
       width="100%"
       paddingLeft={2}
+      paddingBottom={4}
       sx={{
         position: "relative",
         ":before": {
@@ -46,74 +46,78 @@ export default function ExperienceCard({
           backgroundColor: "rgba(200,200,200)",
           transform: "translateX(-50%) translateY(-50%)",
         },
+        ":after": {
+          left: "-25px",
+          content: `"${duration}"`,
+          position: "absolute",
+          fontSize: ".9rem",
+          color: "rgba(200,200,200)",
+
+          top: "0",
+          transform: "translateX(-100%) translateY(-50%)",
+        },
         borderLeft: "2px solid rgba(200,200,200)",
-        marginBottom: 3,
       }}
     >
-      <Paper>
-        <Card variant="outlined" sx={{ padding: 2 }}>
-          <CardContent>
-            <Grid2 container spacing={2}>
+      <Card sx={{ border: "none", padding: 0 }} variant="outlined">
+        <CardContent sx={{ padding: 0 }}>
+          <Grid2 container spacing={2}>
+            <Grid2
+              size={12}
+              container
+              justifyContent="center"
+              alignItems="center"
+            ></Grid2>
+            <Grid2 size={12}>
               <Grid2
-                size={12}
                 container
-                justifyContent="center"
+                flexDirection={"row"}
                 alignItems="center"
-              ></Grid2>
-              <Grid2 size={12}>
-                <Grid2
-                  container
-                  flexDirection={"row"}
-                  alignItems="center"
-                  gap={2}
-                >
-                  <Typography variant="h4">{title}</Typography>
-                  <Avatar
-                    src={logo}
-                    alt={company}
-                    sx={{ width: 64, height: 64 }}
-                  />
-                </Grid2>
-                <Typography variant="subtitle1" color="text.secondary">
-                  {company} · {type}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {duration}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {location}
-                </Typography>
-                {description && (
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ marginTop: 1 }}
-                  >
-                    {description}
-                  </Typography>
-                )}
-                <Box
-                  sx={{
-                    marginTop: 2,
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: 1,
-                  }}
-                >
-                  {skills.map((skill, index) => (
-                    <Chip
-                      key={index}
-                      label={skill}
-                      color="primary"
-                      variant="outlined"
-                    />
-                  ))}
-                </Box>
+                gap={2}
+              >
+                <Typography variant="h4">{title}</Typography>
+                <Avatar
+                  src={logo}
+                  alt={company}
+                  sx={{ width: 64, height: 64 }}
+                />
               </Grid2>
+              <Typography variant="subtitle1" color="text.secondary">
+                {company} · {type}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {location}
+              </Typography>
+              {description && (
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ marginTop: 1 }}
+                >
+                  {description}
+                </Typography>
+              )}
+              <Box
+                sx={{
+                  marginTop: 2,
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: 1,
+                }}
+              >
+                {skills.map((skill, index) => (
+                  <Chip
+                    key={index}
+                    label={skill}
+                    color="primary"
+                    variant="outlined"
+                  />
+                ))}
+              </Box>
             </Grid2>
-          </CardContent>
-        </Card>
-      </Paper>
+          </Grid2>
+        </CardContent>
+      </Card>
     </Grid2>
   );
 }

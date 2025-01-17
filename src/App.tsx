@@ -7,6 +7,8 @@ import me from "./assets/me.jpg";
 import EducationCard from "./EducationCard";
 import ExperienceCard from "./ExperienceCard";
 import ProjectCard from "./ProjectCard";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import CakeIcon from "@mui/icons-material/Cake";
 
 const dataEducation = [
   {
@@ -22,6 +24,7 @@ const dataEducation = [
       "LLM",
       "Data visualisation",
       "pytorch",
+      "tensorflow",
     ],
   },
   {
@@ -34,7 +37,6 @@ const dataEducation = [
     skills: [
       "Intelligence artificielle",
       "Algorithmes",
-      "Anglais",
       "Structure des données",
       "HTML",
       "CSS",
@@ -104,7 +106,7 @@ const dataExperience = [
     title: "Développeur web",
     company: "QUEST INNOV",
     type: "CDD",
-    duration: "juin 2024 - août 2024 · 3 mois",
+    duration: "juin 2024 - août 2024",
     location: "Dax, Nouvelle-Aquitaine, France · Sur site",
     description:
       "Développement de micro applications sur mesure pour le suivi des flux logistiques et des informations entre des gens du monde de l'agroalimentaire, les transporteurs et les fermiers",
@@ -124,7 +126,7 @@ const dataExperience = [
     title: "Développeur web",
     company: "TECNALIA Research & Innovation",
     type: "Stage",
-    duration: "sept. 2023 - janv. 2024 · 5 mois",
+    duration: "sept. 2023 - janv. 2024",
     location: "Saint-Sébastien, Pays Basque, Espagne · Hybride",
     description:
       "Création d'une interface web pour le projet Exkalbot qui permet la perparation de plats de pâtes personnalisés de façon automatique sur une borne de commande tel que celles des fast-foods",
@@ -145,7 +147,7 @@ const dataExperience = [
     title: "Développeur web",
     company: "QUEST INNOV",
     type: "CDD",
-    duration: "juin 2023 - août 2023 · 3 mois",
+    duration: "juin 2023 - août 2023",
     location: "Dax, Nouvelle-Aquitaine, France · Sur site",
     description:
       "Développement de micro applications sur mesure pour le suivi des flux logistiques et des informations entre des gens du monde de l'agroalimentaire, les transporteurs et les fermiers",
@@ -165,7 +167,7 @@ const dataExperience = [
     title: "Développeur web",
     company: "QUEST INNOV",
     type: "Stage",
-    duration: "avr. 2022 - juin 2022 · 3 mois",
+    duration: "avr. 2022 - juin 2022",
     location: "Dax, Nouvelle-Aquitaine, France · Sur site",
     description:
       "Développement de micro applications sur mesure pour le suivi des flux logistiques et des informations entre des gens du monde de l'agroalimentaire, les transporteurs et les fermiers",
@@ -188,7 +190,8 @@ const projectData = [
     description:
       "Développement d'un jeu stratégique intégrant plusieurs algorithmes d'intelligence artificielle (minimax, alpha-beta, MCTS, AlphaZero). Réalisé dans le cadre du cours d'IA à Polytech Lyon.",
     technologies: ["React.js", "MUI", "JavaScript", "TypeScript", "IA"],
-    link: "https://github.com/Energisse/POLYTECH-IA-PROJET-PIPOPIPETTE",
+    repo: "https://github.com/Energisse/POLYTECH-IA-PROJET-PIPOPIPETTE",
+    link: "https://energisse.github.io/POLYTECH-IA-PROJET-PIPOPIPETTE/",
     image:
       "https://raw.githubusercontent.com/Energisse/POLYTECH-IA-PROJET-PIPOPIPETTE/refs/heads/master/example.gif",
   },
@@ -196,7 +199,7 @@ const projectData = [
     title: "Développement d'un microcontrôleur et de son assembleur",
     image:
       "https://github.com/Energisse/polytech-projet-architecture/raw/main/img/demo.gif",
-    link: "https://github.com/Energisse/polytech-projet-architecture",
+    repo: "https://github.com/Energisse/polytech-projet-architecture",
     description:
       "Développement d'un microcontrôleur a l'aide du logiciel Logisim et de son assembleur en Node'Js. Le projet a été réalisé dans le cadre du cours structure des calculateurs de Polytech Lyon.",
     technologies: ["Logisim", "Node.js", "JavaScript", "Typescript"],
@@ -206,7 +209,8 @@ const projectData = [
       "Visualisation des rélations entre les personnages de Game of Thrones",
     image:
       "https://github.com/Energisse/M2IA-DATA_VIZ-TP4/raw/master/img/demo.gif",
-    link: "https://github.com/Energisse/M2IA-DATA_VIZ-TP4",
+    repo: "https://github.com/Energisse/M2IA-DATA_VIZ-TP4",
+    link: "https://energisse.github.io/M2IA-DATA_VIZ-TP4/",
     description:
       "Visualisation des rélations entre les personnages de Game of Thrones. Le projet a été réalisé dans le cadre du cours de visualisation de données du Master 2 IA de l'université Lyon 1.",
     technologies: ["D3.js", "JavaScript", "DataViz"],
@@ -215,26 +219,56 @@ const projectData = [
     title: "Music show viz",
     image:
       "https://github.com/Energisse/music-show-viz/blob/master/doc/demo.gif?raw=true",
-    link: "https://github.com/Energisse/music-show-viz",
+    repo: "https://github.com/Energisse/music-show-viz",
+    link: "https://energisse.github.io/music-show-viz/",
     description:
       "Projet de visualisation de données sur nos habitudes d'écoute de musique. Le projet a été réalisé dans le cadre du cours de visualisation de données du Master 2 IA de l'université Lyon 1.",
     technologies: ["D3.js", "JavaScript", "Typescript", "DataViz", "React"],
+  },
+  {
+    title: "Potagame",
+    image:
+      "https://github.com/Energisse/Potagame/blob/main/doc/img/presentation.gif?raw=true",
+    repo: "https://github.com/Energisse/Potagame",
+    description:
+      "Potagame est un jeu de simulation de jardinage en ligne. Le joueur doit gérer son potager en plantant des légumes, en les arrosant et en les récoltant. Le jeu a été réalisé dans le cadre de Polytech Lyon.",
+    technologies: ["Java"],
+  },
+  {
+    title: " Tic Tac Toe",
+    image:
+      "https://github.com/florianBurdairon/tic-tac-toe/raw/master/img/overview.png",
+    repo: "https://github.com/florianBurdairon/tic-tac-toe",
+    description: "Jeu de morpion local/en ligne réalisé en Java.",
+    technologies: ["Java"],
   },
 ];
 
 function App() {
   return (
-    <Grid2 container flexDirection={"column"} p={1}>
+    <Grid2
+      container
+      flexDirection={"column"}
+      p={4}
+      paddingLeft={24}
+      paddingRight={24}
+    >
       <Grid2 container justifyContent="center">
         <Grid2 size={6} p={1} paddingTop={15} paddingBottom={15}>
-          <Typography variant="h2" m={8}>
+          <Typography variant="h2" m={8} marginRight={0} marginLeft={0}>
             HALVICK Thomas
           </Typography>
 
-          <Typography variant="h4" m={8}>
+          <Typography variant="h4" m={8} marginRight={0} marginLeft={0}>
             Full-stack web developer Node/React
           </Typography>
-          <Typography variant="body1" m={8} sx={{ lineHeight: 2 }}>
+          <Typography
+            variant="body1"
+            m={8}
+            marginRight={0}
+            marginLeft={0}
+            sx={{ lineHeight: 2 }}
+          >
             Étudiant en double diplôme à Polytech Lyon et à l'Université Lyon 1,
             je me spécialise dans le développement web full-stack et
             l'intelligence artificielle. Passionné par les technologies
@@ -248,6 +282,29 @@ function App() {
             outils innovants et adaptés à vos besoins !
           </Typography>
 
+          <Grid2>
+            <Typography variant="body1" marginRight={0}>
+              <LocalPhoneIcon
+                sx={{
+                  verticalAlign: "sub",
+                  paddingRight: 2,
+                }}
+              />{" "}
+              +33 6 13 25 63 93
+            </Typography>
+            <Typography variant="body1" marginRight={0}>
+              <CakeIcon
+                sx={{
+                  verticalAlign: "sub",
+                  paddingRight: 2,
+                }}
+              />
+              {new Date(
+                new Date().getTime() - new Date("2002-04-05").getTime()
+              ).getFullYear() - 1970}{" "}
+              ans
+            </Typography>
+          </Grid2>
           <Grid2 container justifyContent="center" gap={2}>
             <a
               href="https://www.linkedin.com/in/thomas-halvick-7709b81ba/"
@@ -286,30 +343,38 @@ function App() {
             </a>
           </Grid2>
         </Grid2>
-        <Grid2 size={6} p={1}>
+        <Grid2
+          size={6}
+          paddingTop={15}
+          paddingBottom={15}
+          container
+          justifyContent="center"
+          alignItems="center"
+        >
           <img
             src={me}
             alt="Avatar"
-            height={400}
-            width={400}
+            height={"auto"}
+            width={"50%"}
             style={{
               borderRadius: "15px",
               rotate: "5deg",
-              marginLeft: "50%",
-              transform: "translateX(-50%) translateY(50%)",
             }}
           />
         </Grid2>
       </Grid2>
       <Grid2 container p={2}>
-        <Typography variant="h2">Éducation</Typography>
-
+        <Typography variant="h2" marginBottom={8}>
+          Éducation
+        </Typography>
         {dataEducation.map((edu, index) => (
           <EducationCard key={index} {...edu} />
         ))}
       </Grid2>
       <Grid2 container p={2}>
-        <Typography variant="h2">Expérience</Typography>
+        <Typography variant="h2" marginBottom={8}>
+          Expérience
+        </Typography>
 
         {dataExperience.map((exp, index) => (
           <ExperienceCard key={index} {...exp} />
@@ -317,9 +382,15 @@ function App() {
       </Grid2>
       <Grid2 container p={2} flexDirection={"column"}>
         <Typography variant="h2">Projets</Typography>
-        <Grid2 container flexDirection={"row"}>
+        <Grid2
+          paddingTop={8}
+          container
+          spacing={8}
+          flexDirection={"row"}
+          justifyContent={"stretch"}
+        >
           {projectData.map((exp, index) => (
-            <Grid2 size={4} p={2}>
+            <Grid2 size={4}>
               <ProjectCard key={index} {...exp} />
             </Grid2>
           ))}
